@@ -14,13 +14,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://chel.qzz.io/assets/css/main.css?v=2.4.1">
+  <link rel="stylesheet" href="https://chel.qzz.io/assets/css/main.css?v=3.1.1">
 </head>
 <body>
 
 <!-- Custom cursor -->
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
+<div class="cursor-trail" id="cursor-trail" aria-hidden="true"></div>
 
 <!-- Scroll progress -->
 <div id="scroll-progress"></div>
@@ -42,12 +43,12 @@
       <span class="brand-name">Chel<em>.dev</em></span>
     </a>
     <div class="nav-links">
-      <a href="index.html#about"        class="nav-link">About</a>
-      <a href="index.html#skills"       class="nav-link">Skills</a>
-      <a href="index.html#projects"     class="nav-link">Projects</a>
-      <a href="index.html#certificates" class="nav-link">Certificates</a>
-      <a href="index.html#mirrors"      class="nav-link">Mirrors</a>
-      <a href="index.html#contact"      class="nav-link">Contact</a>
+      <a href="index.html#about"        class="nav-link" data-hud="01">About</a>
+      <a href="index.html#skills"       class="nav-link" data-hud="02">Skills</a>
+      <a href="index.html#projects"     class="nav-link" data-hud="03">Projects</a>
+      <a href="index.html#certificates" class="nav-link" data-hud="04">Certificates</a>
+      <a href="index.html#mirrors"      class="nav-link" data-hud="05">Mirrors</a>
+      <a href="index.html#contact"      class="nav-link" data-hud="06">Contact</a>
     </div>
     <a href="https://chel.qzz.io/admin/login" id="nav-cta" class="btn btn-ghost btn-shine" style="padding:10px 22px;font-size:13px;" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
@@ -61,13 +62,16 @@
 
 <!-- Mobile menu -->
 <div id="mobile-menu">
-  <a href="index.html#about">About</a>
-  <a href="index.html#skills">Skills</a>
-  <a href="index.html#projects">Projects</a>
-  <a href="index.html#certificates">Certificates</a>
-  <a href="index.html#mirrors">Mirrors</a>
-  <a href="index.html#contact">Contact</a>
-  <a href="https://chel.qzz.io/admin/login" class="text-gold" target="_blank" rel="noopener">Admin Portal</a>
+  <div class="mobile-aurora" aria-hidden="true"></div>
+  <div class="mobile-menu-inner">
+    <a href="index.html#about"><span class="mm-idx">01</span>About</a>
+    <a href="index.html#skills"><span class="mm-idx">02</span>Skills</a>
+    <a href="index.html#projects"><span class="mm-idx">03</span>Projects</a>
+    <a href="index.html#certificates"><span class="mm-idx">04</span>Certificates</a>
+    <a href="index.html#mirrors"><span class="mm-idx">05</span>Mirrors</a>
+    <a href="index.html#contact"><span class="mm-idx">06</span>Contact</a>
+    <a href="https://chel.qzz.io/admin/login" class="text-gold" target="_blank" rel="noopener"><span class="mm-idx">07</span>Admin Portal</a>
+  </div>
 </div>
 
 <main id="top">
@@ -109,7 +113,7 @@
 @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 
-<script src="https://chel.qzz.io/assets/js/main.js?v=2.4.1"></script>
+<script src="https://chel.qzz.io/assets/js/main.js?v=3.1.1"></script>
 <script src="assets/js/app.js"></script>
 
 </body>
