@@ -335,7 +335,8 @@
     }
     var html = '';
     mirrors.forEach(function(domain) {
-      html += '<span class="mirror-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9z"/></svg>' + esc(domain) + '</span>';
+      var href = /^https?:\/\//i.test(domain) ? domain : 'https://' + String(domain).replace(/^\/+/, '');
+      html += '<a class="mirror-pill" href="' + esc(href) + '" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 5.7 4 9s-1.5 6.4-4 9c-2.5-2.6-4-5.7-4-9s1.5-6.4 4-9z"/></svg>' + esc(domain) + '</a>';
     });
     container.innerHTML = html;
   }
